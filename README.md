@@ -77,20 +77,6 @@ SkyCast uses these Open-Meteo endpoints:
 
 Weather information is provided by [Open-Meteo](https://open-meteo.com/). Review its [terms](https://open-meteo.com/en/terms) and attribution requirements before using the project commercially.
 
-## 🖼️ Screenshots
-
-To make the GitHub repository more appealing, add a screenshot of the running website:
-
-1. Create a folder named `screenshots` in the repository.
-2. Save a screenshot as `screenshots/skycast-dashboard.png`.
-3. Uncomment or add this Markdown in the README:
-
-   ```md
-   ![SkyCast dashboard](screenshots/skycast-dashboard.png)
-   ```
-
-Use your own screenshot of the actual running project so the README accurately represents the app.
-
 ## 🛠️ Ideas for Future Improvements
 
 - Save favourite cities
