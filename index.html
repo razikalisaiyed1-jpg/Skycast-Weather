@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101b3f" />
+  <title>SkyCast — Weather, beautifully clear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SkyCast home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>Weather By Razikali<span class="brand-dot">.</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="live-indicator"><i></i> LIVE WEATHER</span>
+        <button class="icon-button" id="unitToggle" type="button" aria-label="Toggle temperature units">°C <span class="toggle-divider">/</span> °F</button>
+      </div>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL WEATHER SPACE</p>
+        <h1>Feel the forecast.</h1>
+        <p class="intro-copy">A little more clarity for whatever today brings.</p>
+      </div>
+      <form class="search" id="searchForm">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg>
+        <input id="cityInput" type="search" placeholder="Search a city..." autocomplete="off" aria-label="Search city" />
+        <button type="submit" aria-label="Search">Search</button>
+      </form>
+    </section>
+
+    <div class="status-message" id="statusMessage" role="status">Finding your weather...</div>
+
+    <section class="dashboard" id="weatherContent" hidden>
+      <article class="hero-card glass">
+        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+        <div class="hero-top">
+          <div>
+            <p class="card-kicker">CURRENT WEATHER</p>
+            <h2 id="cityName">Ahmedabad</h2>
+            <p class="date-line" id="dateLine">Today</p>
+          </div>
+          <div class="weather-symbol" id="mainIcon" aria-hidden="true">☀️</div>
+        </div>
+        <div class="temperature-row">
+          <div class="temperature" id="temperature">--<span>°</span></div>
+          <div class="condition-block">
+            <p id="condition">Loading...</p>
+            <span>Feels like <b id="feelsLike">--°</b></span>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <span id="highLow">H: --° &nbsp; L: --°</span>
+          <span class="sunset-label"><span class="sunset-dot"></span><span id="sunTimes">Sunrise -- · Sunset --</span></span>
+        </div>
+      </article>
+
+      <article class="details-card glass">
+        <div class="section-heading"><div><p class="card-kicker">AT A GLANCE</p><h3>Today's details</h3></div><span class="heading-spark">✳</span></div>
+        <div class="metric-grid">
+          <div class="metric"><span class="metric-icon">💧</span><div><span class="metric-label">Humidity</span><strong id="humidity">--%</strong><small>Air moisture</small></div></div>
+          <div class="metric"><span class="metric-icon">🌬️</span><div><span class="metric-label">Wind speed</span><strong id="wind">-- <small>km/h</small></strong><small id="windDirection">Breeze outside</small></div></div>
+          <div class="metric"><span class="metric-icon">☀️</span><div><span class="metric-label">UV index</span><strong id="uv">--</strong><small id="uvLabel">Today's exposure</small></div></div>
+          <div class="metric"><span class="metric-icon">👁️</span><div><span class="metric-label">Visibility</span><strong id="visibility">-- <small>km</small></strong><small>Across your area</small></div></div>
+        </div>
+      </article>
+
+      <section class="forecast-card glass">
+        <div class="section-heading forecast-heading"><div><p class="card-kicker">PLAN AHEAD</p><h3>Next 7 days</h3></div><span class="muted-note">A week at a glance</span></div>
+        <div class="forecast-list" id="forecastList"></div>
+      </section>
+
+      <section class="hourly-card glass">
+        <div class="section-heading"><div><p class="card-kicker">THE DAY, BY THE HOUR</p><h3>Hourly forecast</h3></div><span class="muted-note">Next 12 hours</span></div>
+        <div class="hourly-list" id="hourlyList"></div>
+      </section>
+    </section>
+
+    <footer><span class="footer-logo">skycast<span class="brand-dot">.</span></span><span>Weather for your everyday.</span><span>Data by Open-Meteo</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
