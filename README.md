@@ -57,17 +57,6 @@ Replace `YOUR-USERNAME` in the clone URL with your GitHub username after you cre
 
 SkyCast fetches live data from Open-Meteo and loads fonts from Google Fonts, so an internet connection is needed for live weather data and remote fonts.
 
-## 🌐 Publish with GitHub Pages
-
-1. Push the project files to a GitHub repository.
-2. Open the repository on GitHub and select **Settings**.
-3. Open **Pages** in the left sidebar.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)` folder, then click **Save**.
-6. Wait for the deployment to finish. GitHub will show the published website URL in the Pages section.
-
-Because this is a static HTML/CSS/JavaScript project, no build step is required.
-
 ## 🔌 API Endpoints
 
 SkyCast uses these Open-Meteo endpoints:
